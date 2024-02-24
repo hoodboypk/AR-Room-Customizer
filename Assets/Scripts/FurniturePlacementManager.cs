@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+
 
 public class FurniturePlacementManager : MonoBehaviour
 {
@@ -26,7 +29,7 @@ public class FurniturePlacementManager : MonoBehaviour
             {
                 bool collision = raycastManager.Raycast(Input.GetTouch(0).position, raycastHits,
                     TrackableType.PlaneWithinPolygon);
-                if (collision)
+                if (collision && isButtonPressed() == false)
                 {
                     GameObject _object = Instantiate(SpawnableFurniture);
                     _object.transform.position = raycastHits[0].pose.position;
@@ -41,6 +44,23 @@ public class FurniturePlacementManager : MonoBehaviour
                 planeManager.enabled = false;
             }
         }
+    }
+
+    public bool isButtonPressed()
+    {
+        if(EventSystem.current.currentSelectedGameObject?.GetComponent<Button>() == null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public void SwitchFurnitue(GameObject furniture)
+    {
+        SpawnableFurniture = furniture;
     }
 
 }
