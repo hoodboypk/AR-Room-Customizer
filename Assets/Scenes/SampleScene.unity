@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -808,7 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlanePrefab: {fileID: 0}
+  m_PlanePrefab: {fileID: 8482797938157043995, guid: c2446e92446d22243a62b534df7cea0c, type: 3}
   m_DetectionMode: -1
 --- !u!114 &1636067737
 MonoBehaviour:
@@ -864,7 +864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4a96985ebecb641bff4e0bc25fc2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnableFurniture: {fileID: 0}
+  SpawnableFurniture: {fileID: 2683126175790518071, guid: d7efbcab7e630fb4f9a01349288209a7, type: 3}
   sessionOrigin: {fileID: 1636067738}
   raycastManager: {fileID: 1636067737}
   planeManager: {fileID: 1636067736}
